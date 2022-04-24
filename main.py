@@ -3,8 +3,10 @@ import random
 import itertools
 import math
 
+n = 4  # length of the password
+
 locked_file = input("Input the directory of the locked pdf file: ")
-total_passwords = math.factorial(10)/(math.factorial(10-4))
+total_passwords = math.factorial(10) / (math.factorial(10 - n))
 choices = [''.join(x) for x in itertools.permutations('0123456789', 4)]
 
 for index, choice in enumerate(choices):
